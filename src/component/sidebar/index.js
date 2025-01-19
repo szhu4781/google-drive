@@ -1,6 +1,7 @@
 import React from 'react'
 import NewFile from './NewFile'
 import SidebarItem from './SidebarItem'
+import '../../styles/Sidebar.css'
 
 import InsertDriveFileIcon from '@material-ui/icons/InsertDriveFile';
 import ImportantDevicesIcon from '@material-ui/icons/ImportantDevices';
@@ -24,6 +25,8 @@ const index = () => {
                 <SidebarItem icon={(<DeleteOutlineIcon />)} label={'Bin'} />
                 
                 <hr/>
+
+                <SidebarItem icon={(<StorageIcon />)} label={'Storage'} />
 
                 {/* sidebar elements */}
                 

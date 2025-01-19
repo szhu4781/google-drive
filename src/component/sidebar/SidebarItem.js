@@ -1,5 +1,6 @@
 import React from 'react'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import '../../styles/SidebarItem.css'
 
 const SidebarItem = ({arrow, icon, label}) => {
     return (
