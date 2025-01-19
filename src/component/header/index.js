@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../styles/Header.css'
 
 import GDriveLogo from '../../media/google-drive-logo.png'
 import SearchIcon from '@mui/icons-material/Search';
