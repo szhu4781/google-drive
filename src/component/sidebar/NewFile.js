@@ -1,11 +1,14 @@
 import React from 'react'
 import AddIcon from '@mui/icons-material/Add';
+import '../../styles/NewFile.css'
 
 const NewFile = () => {
     return (
         <div className='NewFile'>
-            <AddIcon />
-            <p>New</p>
+            <div className="newFile_container">
+                <AddIcon />
+                <p>New</p>
+            </div>
         </div>
     )
 }
