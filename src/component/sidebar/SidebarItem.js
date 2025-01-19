@@ -1,12 +1,12 @@
 import React from 'react'
-import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import '../../styles/SidebarItem.css'
 
 const SidebarItem = ({arrow, icon, label}) => {
     return (
         <div className='sidebarItem'>
             <div className="sidebarItme_arrow">
-                {arrow && (<ArrowRightAltIcon />)}
+                {arrow && (<ArrowRightIcon />)}
             </div>
 
             <div className="sidebarItem_main">
