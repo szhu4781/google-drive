@@ -13,7 +13,7 @@ const index = () => {
     <div className='header'>
         <div className='header_logo'>
             <img src={GDriveLogo} alt='Google Drive'/>
-            <span>Drive</span>
+            <span>CS Local Bois Storage</span>
         </div>
         <div className='header_searchContainer'>
             <div className="header_searchBar">
