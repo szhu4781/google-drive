@@ -4,7 +4,7 @@ import '../../styles/NewFile.css'
 
 const NewFile = () => {
     return (
-        <div className='NewFile'>
+        <div className='newFile'>
             <div className="newFile_container">
                 <AddIcon />
                 <p>New</p>
