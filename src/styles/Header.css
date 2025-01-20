@@ -24,7 +24,8 @@
     color: gray;
     font-size: 20px;
     font-weight: 500;
-    margin-left: 16px;
+    margin-left: 20px;
+    margin-right: 100px;
 }
 
 .header_searchContainer{
@@ -76,7 +77,7 @@
 }
 
 .header_icons>span{
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 .header_icons>img{
