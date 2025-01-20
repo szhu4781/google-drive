@@ -12,22 +12,23 @@ const index = () => {
   return (
     <div className='header'>
         <div className='header_logo'>
-            <img src={GDriveLogo} alt=''/>
+            <img src={GDriveLogo} alt='Google Drive'/>
             <span>Drive</span>
         </div>
         <div className='header_searchContainer'>
             <div className="header_searchBar">
-              <SearchIcon />
-              <input type='text' placeholder='Search in Drive'/>
-              <ExpandMoreIcon />
+                <SearchIcon />
+                <input type='text' placeholder='Search in Drive'/>
+                <ExpandMoreIcon />
             </div>
         </div>
         <div className='header_icons'>
-            <span>
+            <span className='help_outline'>
                 <HelpOutlineIcon />
+            </span>
+            <span>
                 <SettingsIcon />
             </span>
-
             <AppsIcon />
             <img src="" alt='User Photos'/>
         </div>
