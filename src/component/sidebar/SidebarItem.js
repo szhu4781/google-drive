@@ -5,7 +5,7 @@ import '../../styles/SidebarItem.css'
 const SidebarItem = ({arrow, icon, label}) => {
     return (
         <div className='sidebarItem'>
-            <div className="sidebarItme_arrow">
+            <div className="sidebarItem_arrow">
                 {arrow && (<ArrowRightIcon />)}
             </div>
 
