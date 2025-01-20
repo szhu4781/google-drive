@@ -17,12 +17,12 @@ const index = () => {
             <NewFile />
 
             <div className="sidebar_items">
-                <SidebarItem arrow icon={(<InsertDriveFileIcon />)} label={'My Drive'} />
+                <SidebarItem arrow icon={(<InsertDriveFileIcon />)} label={'Drive'} />
                 <SidebarItem arrow icon={(<ImportantDevicesIcon />)} label={'Computers'} />
                 <SidebarItem icon={(<PeopleAltIcon />)} label={'Shared with me'} />
                 <SidebarItem icon={(<QueryBuilderIcon />)} label={'Recent'} />
                 <SidebarItem icon={(<StarBorderIcon />)} label={'Starred'} />
-                <SidebarItem icon={(<DeleteOutlineIcon />)} label={'Bin'} />
+                <SidebarItem icon={(<DeleteOutlineIcon />)} label={'Trash'} />
                 
                 <hr/>
 
