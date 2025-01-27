@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/google-drive/static/css/main.f241d1c6.css",
+    "main.js": "/google-drive/static/js/main.7f264be3.js",
+    "static/js/882.072a9a5d.chunk.js": "/google-drive/static/js/882.072a9a5d.chunk.js",
+    "index.html": "/google-drive/index.html",
+    "main.f241d1c6.css.map": "/google-drive/static/css/main.f241d1c6.css.map",
+    "main.7f264be3.js.map": "/google-drive/static/js/main.7f264be3.js.map",
+    "882.072a9a5d.chunk.js.map": "/google-drive/static/js/882.072a9a5d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f241d1c6.css",
+    "static/js/main.7f264be3.js"
+  ]
+}
