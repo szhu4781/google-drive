@@ -1,11 +1,7 @@
 import React, { useState } from 'react'
 import '../../styles/NewFile.css'
-
 import AddIcon from '@material-ui/icons/Add';
-
-import firebase from 'firebase'
-import { storage, db } from '../../firebase'
-
+import supabase from '../../supabase';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 
@@ -51,32 +47,39 @@ const NewFile = () => {
         }
     }
 
-    const handleUpload = () => {
+    const handleUpload = async () => {
         setUploading(true)
 
-        storage.ref(`files/${file.name}`).put(file).then(snapshot => {
-            console.log(snapshot)
+        const fileName = file.name;
+        const filePath = `files/${fileName}`;
 
-            storage.ref('files').child(file.name).getDownloadURL().then(url => {
-                //post image inside the db
+        try {
+            // Upload file to Supabase
+            const { data, error } = await supabase.storage
+                .from('file upload') // Replace 'files' with your Supabase bucket name
+                .upload(filePath, file);
 
-                db.collection('myFiles').add({
-                    timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-                    caption: file.name,
-                    fileUrl: url,
-                    size: snapshot._delegate.bytesTransferred,
-                })
+            if (error) throw error;
 
-                setUploading(false)
-                setOpen(false)
-                setFile(null)
-            })
+            console.log('File uploaded:', data);
 
-            storage.ref('files').child(file.name).getMetadata().then(meta => {
-                console.log(meta.size)
-            })
+            // Get the public URL of the file
+            const { publicURL, error: urlError } = supabase.storage
+                .from('files')
+                .getPublicUrl(filePath);
 
-        })
+            if (urlError) throw urlError;
+
+            console.log('File URL:', publicURL);
+
+            setUploading(false);
+            setOpen(false);
+            setFile(null);
+
+        } catch (error) {
+            console.error('Error uploading file:', error.message);
+            setUploading(false);
+        }
     }
 
     return (
