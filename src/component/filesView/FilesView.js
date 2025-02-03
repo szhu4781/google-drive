@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import '../../styles/FilesView.css'
 import supabase from '../../supabase';
 import FileItem from './FileItem';
+import FileCard from './FileCard';
 
 const FilesView = () => {
     const [files, setFiles] = useState([]);
@@ -33,6 +34,10 @@ const FilesView = () => {
     return (
         <div className='fileView'>
             <div className="fv_row">
+                {files.slice(0, 5).map(({ id, caption }) => (
+                    <FileCard key={id} caption={caption} />
+                ))}
+
             </div>
             <div className="fv_title">
                 <div className="fv_title_left">
