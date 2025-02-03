@@ -2,11 +2,12 @@ import React from 'react'
 import '../../styles/Header.css'
 
 import GDriveLogo from '../../media/google-drive-logo.png'
-import SearchIcon from '@mui/icons-material/Search';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import AppsIcon from '@mui/icons-material/Apps';
-import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
-import SettingsIcon from '@mui/icons-material/Settings';
+import SearchIcon from '@material-ui/icons/Search';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
+import SettingsIcon from '@material-ui/icons/Settings';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import AppsIcon from '@material-ui/icons/Apps';
 
 const index = () => {
   return (
