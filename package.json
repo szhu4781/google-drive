@@ -5,21 +5,18 @@
   "dependencies": {
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
-    "@material-ui/core": "^4.12.4",
+    "@material-ui/core": "4.11.3",
     "@material-ui/icons": "^4.11.3",
-    "@mui/icons-material": "^6.4.0",
-    "@mui/material": "^6.4.0",
-    "@types/react": "^19.0.7",
-    "cra-template": "1.2.0",
-    "react": "18",
-    "react-dom": "18",
-    "react-scripts": "^5.0.1",
-    "typescript": "^5.7.3",
-    "web-vitals": "^4.2.4",
+    "firebase": "8.2.4",
+    "firebase-tools": "9.2.2",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-scripts": "4.0.1",
+    "web-vitals": "0.2.4",
     "yarn": "^1.22.22"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -42,5 +39,8 @@
       "last 1 safari version"
     ]
   },
-  "packageManager": "yarn@4.6.0+sha512.5383cc12567a95f1d668fbe762dfe0075c595b4bfff433be478dbbe24e05251a8e8c3eb992a986667c1d53b6c3a9c85b8398c35a960587fbd9fa3a0915406728"
+  "packageManager": "yarn@4.6.0+sha512.5383cc12567a95f1d668fbe762dfe0075c595b4bfff433be478dbbe24e05251a8e8c3eb992a986667c1d53b6c3a9c85b8398c35a960587fbd9fa3a0915406728",
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
 }
