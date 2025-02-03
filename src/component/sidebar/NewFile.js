@@ -51,12 +51,12 @@ const NewFile = () => {
         setUploading(true)
 
         const fileName = file.name;
-        const filePath = `files/${fileName}`;
+        const filePath = `file_upload/${fileName}`;
 
         try {
             // Upload file to Supabase
             const { data, error } = await supabase.storage
-                .from('file upload') 
+                .from('file_upload') 
                 .upload(filePath, file);
 
             if (error) throw error;
@@ -65,7 +65,7 @@ const NewFile = () => {
 
             // Get the public URL of the file
             const { data: publicURLData, error: urlError } = supabase.storage
-                .from('files')
+                .from('file_upload')
                 .getPublicUrl(filePath);
 
             const publicUrl = publicURLData.publicUrl;
