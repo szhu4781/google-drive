@@ -56,7 +56,7 @@ const NewFile = () => {
         try {
             // Upload file to Supabase
             const { data, error } = await supabase.storage
-                .from('file upload') // Replace 'files' with your Supabase bucket name
+                .from('file upload') 
                 .upload(filePath, file);
 
             if (error) throw error;
@@ -64,13 +64,27 @@ const NewFile = () => {
             console.log('File uploaded:', data);
 
             // Get the public URL of the file
-            const { publicURL, error: urlError } = supabase.storage
+            const { data: publicURLData, error: urlError } = supabase.storage
                 .from('files')
                 .getPublicUrl(filePath);
 
+            const publicUrl = publicURLData.publicUrl;
+
             if (urlError) throw urlError;
 
-            console.log('File URL:', publicURL);
+            //Insert metadata to the files table
+            const {error: insertError} = await supabase
+                .from('files')
+                .insert([
+                    {
+                        caption: fileName,
+                        timestamp: new Date().toISOString(),
+                        fileUrl: publicUrl,
+                        size: file.size,
+                    }
+                ]);
+
+            if(insertError) throw insertError;
 
             setUploading(false);
             setOpen(false);
