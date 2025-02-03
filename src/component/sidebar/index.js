@@ -26,10 +26,7 @@ const index = () => {
                 
                 <hr/>
 
-                <SidebarItem icon={(<StorageIcon />)} label={'Storage'} />
-
-                {/* sidebar elements */}
-                
+                <SidebarItem icon={(<StorageIcon />)} label={'Storage'} />       
             </div>
         </div>
     )

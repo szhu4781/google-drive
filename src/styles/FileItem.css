@@ -5,11 +5,16 @@
     width: 100%;
 }
 
+.fileItem:hover{
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
 .fileItem>a{
     height: 100%;
     display: flex;
     text-decoration: none;
-    color: rgb(85, 78, 78)
+    color: rgb(85, 78, 78);
+    padding-left: 10px;
 }
 
 .fileItem>a>div{
@@ -24,3 +29,20 @@
 .fT_L{
     flex: 1;
 }
+
+.fT_R{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 200px;
+    padding-right: 10px;
+    gap: 40px;
+}
+
+.fT_R p {
+    width: 80px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+

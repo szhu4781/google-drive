@@ -99,7 +99,7 @@ const NewFile = () => {
     return (
         <div className='newFile'>
             <div className="newFile_container" onClick={handleOpen}>
-                <AddIcon fontSize='large' />
+                <AddIcon fontSize='default' />
                 <p>New</p>
             </div>
 

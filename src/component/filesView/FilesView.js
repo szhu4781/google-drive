@@ -34,8 +34,8 @@ const FilesView = () => {
     return (
         <div className='fileView'>
             <div className="fv_row">
-                {files.slice(0, 5).map(({ id, caption }) => (
-                    <FileCard key={id} caption={caption} />
+                {files.slice(0, 5).map(({ id, caption, fileUrl }) => (
+                    <FileCard key={id} caption={caption} fileUrl={fileUrl}/>
                 ))}
 
             </div>

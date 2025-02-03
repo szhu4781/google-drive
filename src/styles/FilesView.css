@@ -3,7 +3,7 @@
 }
 
 .fv_row{
-    height: 382px;
+    height: 250px;
     display: flex;
     align-items: center;
 }
@@ -12,6 +12,7 @@
     display: flex;
     margin-bottom: 5px;
     color: rgb(85, 78, 78);
+    font-weight: 500;
 }
 
 .fv_title>div>*{
@@ -24,4 +25,9 @@
 
 .fv_title_right{
     display: flex;
+    padding-right: 10px;
+}
+
+.fv_title_right>p{
+    margin-right: 20px;
 }
